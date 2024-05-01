@@ -1,0 +1,62 @@
+.container {
+  max-width: 1200px;
+  height: 100px;
+  justify-content: center;
+  margin: auto;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.logoWrap {
+  font-family: Rakkas-Regular;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.menuWrap {
+  display: flex;
+  gap: 20px;
+  font-family: GmarketSansMedium;
+}
+
+.menuItem {
+  color: black;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover:after {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+    transition: all 0.2s ease;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+  }
+
+  &:after {
+    display: block;
+    content: "";
+    border-bottom: 1px solid black;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+}
+
+.active {
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  color: black;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+}

@@ -1,0 +1,27 @@
+.section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 1200px;
+  margin: 200px 0;
+}
+
+.titleWrap {
+  display: flex;
+  justify-content: flex-end;
+
+  h2 {
+    font-size: 30px;
+    font-family: GmarketSansBold;
+    text-align: center;
+    line-height: 70px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    width: 300px;
+    height: 70px;
+  }
+}
