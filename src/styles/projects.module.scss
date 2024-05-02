@@ -1,0 +1,67 @@
+.section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: var(--black);
+}
+
+.container {
+  width: 1200px;
+  margin: 150px auto;
+
+  h2 {
+    font-size: 30px;
+    font-family: GmarketSansBold;
+    text-align: left;
+    color: white;
+  }
+}
+
+.imgGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.imgWrap {
+  width: 570px;
+  height: 400px;
+  object-fit: cover;
+  overflow: hidden;
+  padding: 20px 0;
+  position: relative;
+
+  img {
+    object-position: center;
+  }
+}
+
+.imgWrap:hover .overlay {
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.overlay {
+  width: inherit;
+  height: inherit;
+  background-color: white;
+  position: absolute;
+  top: 4.5%;
+  left: 0;
+  padding-left: 30px;
+  opacity: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 1)
+  );
+  p {
+    font-family: GmarketSansBold;
+    font-size: 20px;
+    margin-top: 300px;
+  }
+
+  span {
+    font-family: GmarketSansLight;
+    font-size: 15px;
+  }
+}

@@ -6,13 +6,12 @@
 
 .container {
   width: 1200px;
-  margin: 200px 0;
 }
 
 .titleWrap {
   display: flex;
   justify-content: flex-end;
-
+  //   border-bottom: 2px solid black;
   h2 {
     font-size: 30px;
     font-family: GmarketSansBold;
@@ -23,5 +22,25 @@
     color: white;
     width: 300px;
     height: 70px;
+  }
+}
+
+.skillWrap {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px auto;
+
+  div {
+    margin: 20px;
+
+    img {
+      margin: 0 20px;
+    }
+    img:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s;
+    }
   }
 }

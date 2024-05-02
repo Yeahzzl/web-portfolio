@@ -10,7 +10,6 @@ const Header = () => {
   return (
     <div className={styles.container}>
       <div className={styles.navBar}>
-        <div></div>
         <div className={styles.logoWrap}>LEEYEJI</div>
         <div className={styles.menuWrap}>
           <Link
