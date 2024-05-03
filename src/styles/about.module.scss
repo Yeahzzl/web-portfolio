@@ -1,0 +1,28 @@
+.section {
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 1200px;
+  margin: 150px auto 100px auto;
+  border-bottom: 1px solid black;
+
+  h2 {
+    font-size: 30px;
+    font-family: GmarketSansBold;
+    text-align: left;
+  }
+}
+
+.intro {
+  margin: 150px 0;
+  text-align: center;
+  font-family: GmarketSansMedium;
+  font-size: 25px;
+
+  p {
+    margin: 20px 0;
+  }
+}
