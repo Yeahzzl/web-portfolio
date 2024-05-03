@@ -12,11 +12,6 @@ type Inputs = {
 };
 
 const Contact = () => {
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [title, setTitle] = useState<string>("");
-  const [content, setContent] = useState<string>("");
-
   const {
     register,
     handleSubmit,
@@ -29,11 +24,6 @@ const Contact = () => {
 
   const onSubmitHandler = (data: Inputs) => {
     console.log("제출", data);
-    alert(`이름 : ${data.name}\n이메일 : ${data.email}`);
-  };
-
-  const buttonClickHandler = () => {
-    console.log("제출");
   };
 
   return (
@@ -73,7 +63,10 @@ const Contact = () => {
                 placeholder="이름/소속을 입력해주세요"
                 {...register("name", {
                   required: "이름을 입력해주세요",
-                  maxLength: 20,
+                  minLength: {
+                    value: 2,
+                    message: "이름을 2자 이상 입력해주세요",
+                  },
                 })}
               />
               {errors.name && <p>{errors.name.message}</p>}
@@ -100,7 +93,6 @@ const Contact = () => {
               id="title"
               {...register("title", {
                 required: "제목을 입력해주세요",
-                maxLength: 30,
               })}
             />
             {errors.title && <p>{errors.title.message}</p>}
@@ -112,14 +104,11 @@ const Contact = () => {
               id="content"
               {...register("content", {
                 required: "내용을 입력해주세요",
-                maxLength: 300,
               })}
             />
             {errors.content && <p>{errors.content.message}</p>}
           </div>
-          <button type="submit" onClick={buttonClickHandler}>
-            SEND
-          </button>
+          <button type="submit">SEND</button>
         </form>
       </div>
     </div>
