@@ -1,11 +1,33 @@
+"use client";
+
 import styles from "../styles/introduce.module.scss";
+import { motion } from "framer-motion";
 
 const Introduce = () => {
   return (
     <div className={styles.section}>
       <div className={styles.container}>
-        <h2>Introduce</h2>
-        <div className={styles.firstWrap}>
+        <motion.h2
+          initial={{ opacity: 0, x: 300 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false }}
+          transition={{
+            ease: "easeInOut",
+            x: { duration: 0.5 },
+          }}
+        >
+          Introduce
+        </motion.h2>
+        <motion.div
+          className={styles.firstWrap}
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{
+            ease: "easeInOut",
+            y: { duration: 0.5 },
+          }}
+        >
           <p>꾸준하고 끈질기게 성장합니다.</p>
           <span>
             제한된 시간 동안 효율적인 프로젝트 진행을 위해 우선순위를 정하고
@@ -16,8 +38,17 @@ const Introduce = () => {
             사소한 것도 기록하는 습관으로 100건 이상의 TIL을 꾸준하게
             포스팅했습니다.
           </span>
-        </div>
-        <div className={styles.secondWrap}>
+        </motion.div>
+        <motion.div
+          className={styles.secondWrap}
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{
+            ease: "easeInOut",
+            y: { duration: 0.5 },
+          }}
+        >
           <div>
             <p>효율적인 UI/UX에 대해 고민합니다.</p>
             <span>
@@ -45,7 +76,7 @@ const Introduce = () => {
               소통의 분위기를 이끌어 냈습니다.
             </span>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
