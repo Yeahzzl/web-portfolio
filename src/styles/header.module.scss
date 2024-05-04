@@ -16,7 +16,7 @@
 }
 
 .logoWrap {
-  font-family: Rakkas-Regular;
+  font-family: var(--logo-font);
   font-size: 25px;
   cursor: pointer;
 }
@@ -24,7 +24,7 @@
 .menuWrap {
   display: flex;
   gap: 20px;
-  font-family: GmarketSansMedium;
+  font-weight: 400;
 }
 
 .menuItem {

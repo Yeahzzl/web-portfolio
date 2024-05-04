@@ -1,8 +1,7 @@
 "use client";
 import Link from "next/link";
 import styles from "../styles/contact.module.scss";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 
 type Inputs = {
   name: string;
@@ -15,15 +14,33 @@ const Contact = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<Inputs>({ mode: "onChange" });
 
   const emailRegExp =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-  const onSubmitHandler = (data: Inputs) => {
-    console.log("제출", data);
+  const onSubmitHandler: SubmitHandler<Inputs> = async (
+    event: React.FormEvent<HTMLFormElement>
+  ) => {
+    const formData = new FormData(event.currentTarget);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!response.ok) {
+        console.log("falling over");
+        throw new Error(`response status: ${response.status}`);
+      }
+      const responseData = await response.json();
+      console.log(responseData["message"]);
+      alert("이메일이 성공적으로 전송되었습니다");
+    } catch (error) {
+      console.error(error);
+      alert("이메일 전송에 실패하였습니다");
+    }
   };
 
   return (
@@ -31,20 +48,25 @@ const Contact = () => {
       <div className={styles.container}>
         <h2>CONTACT</h2>
         <div className={styles.contactAdress}>
-          <p>yeahzzl1018@gmail.com</p>
+          <Link
+            href="mailto:yeahzzl1018@gmail.com"
+            className={styles.addressLink}
+          >
+            <li>yeahzzl1018@gmail.com</li>
+          </Link>
           <Link
             target="_blank"
             href="https://github.com/Yeahzzl"
             className={styles.addressLink}
           >
-            <p>github</p>
+            <li>github</li>
           </Link>
           <Link
             target="_blank"
             href="https://velog.io/@yeahzzl/posts"
             className={styles.addressLink}
           >
-            <p>blog</p>
+            <li>blog</li>
           </Link>
         </div>
       </div>
