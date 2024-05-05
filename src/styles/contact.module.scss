@@ -8,34 +8,36 @@
 
   h2 {
     font-size: 30px;
-    font-family: GmarketSansBold;
+    font-weight: 600;
     text-align: left;
   }
 }
 
 .contactAdress {
+  display: flex;
+  flex-direction: column;
   border-left: 2px solid black;
   margin: 100px 0;
   padding: 50px 0 50px 50px;
-  font-family: GmarketSansMedium;
   font-size: 20px;
 }
 
 .addressLink {
-  width: 100px;
+  display: flex;
   text-decoration: none;
   color: black;
-
-  p {
-    width: 100px;
-    margin: 30px 0;
+  width: fit-content;
+  li {
+    display: inline-block;
+    margin: 20px 0;
+    list-style: none;
   }
-}
 
-.addressLink:hover {
-  opacity: 0.3;
-  text-decoration: none;
-  cursor: pointer;
+  li:hover {
+    opacity: 0.3;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 
 .formSection {
@@ -51,7 +53,7 @@
 
   span {
     color: white;
-    font-family: GmarketSansLight;
+    font-weight: 200;
     font-size: 20px;
     display: flex;
     justify-content: center;
@@ -102,7 +104,7 @@
   label {
     color: white;
     text-align: left;
-    font-family: GmarketSansLight;
+    font-weight: 200;
     margin: 10px 0;
   }
 
@@ -118,4 +120,8 @@
     color: rgb(255, 83, 83);
     font-size: 12px;
   }
+}
+
+.toast {
+  font-size: 13px;
 }
