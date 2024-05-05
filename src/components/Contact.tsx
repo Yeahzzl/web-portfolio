@@ -24,8 +24,11 @@ const Contact = () => {
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
   const onSubmitHandler = async () => {
-    const formData = getValues();
-    console.log("data", formData);
+    const formData = new FormData();
+    formData.append("name", getValues().name);
+    formData.append("email", getValues().email);
+    formData.append("title", getValues().title);
+    formData.append("content", getValues().content);
 
     try {
       const response = await fetch("/api/contact", {
@@ -33,11 +36,9 @@ const Contact = () => {
         body: formData,
       });
 
-      // if (!response.ok) {
-      //   console.log("falling over");
-      //   throw new Error(`response status: ${response.status}`);
-      // }
-
+      if (!response.ok) {
+        throw new Error(`response status: ${response.status}`);
+      }
       await response.json();
       toast.success("이메일이 성공적으로 전송되었습니다");
     } catch (error) {
@@ -77,6 +78,7 @@ const Contact = () => {
         <form
           className={styles.formContainer}
           onSubmit={handleSubmit(onSubmitHandler)}
+          method="post"
         >
           <span>궁금한 부분은 무엇이든 물어봐주세요!</span>
           <div className={styles.nameEmail}>
