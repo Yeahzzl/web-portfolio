@@ -31,8 +31,7 @@ export const POST = async (request: NextRequest) => {
     const mailOptions = {
       from: username,
       to: authEmail,
-      //   replyTo: email,
-      subject: `[Portfolio] 문의사항`, //메일제목
+      subject: `[Portfolio] 문의사항`,
       html: `
       <p>이름/소속: ${name} </p>
       <p>이메일: ${email} </p>

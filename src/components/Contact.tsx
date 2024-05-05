@@ -1,7 +1,9 @@
 "use client";
 import Link from "next/link";
 import styles from "../styles/contact.module.scss";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 type Inputs = {
   name: string;
@@ -14,32 +16,33 @@ const Contact = () => {
   const {
     register,
     handleSubmit,
+    getValues,
     formState: { errors },
   } = useForm<Inputs>({ mode: "onChange" });
 
   const emailRegExp =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-  const onSubmitHandler: SubmitHandler<Inputs> = async (
-    event: React.FormEvent<HTMLFormElement>
-  ) => {
-    const formData = new FormData(event.currentTarget);
+  const onSubmitHandler = async () => {
+    const formData = getValues();
+    console.log("data", formData);
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         body: formData,
       });
 
-      if (!response.ok) {
-        console.log("falling over");
-        throw new Error(`response status: ${response.status}`);
-      }
-      const responseData = await response.json();
-      console.log(responseData["message"]);
-      alert("이메일이 성공적으로 전송되었습니다");
+      // if (!response.ok) {
+      //   console.log("falling over");
+      //   throw new Error(`response status: ${response.status}`);
+      // }
+
+      await response.json();
+      toast.success("이메일이 성공적으로 전송되었습니다");
     } catch (error) {
       console.error(error);
-      alert("이메일 전송에 실패하였습니다");
+      toast.error("이메일 전송에 실패하였습니다");
     }
   };
 
@@ -131,6 +134,14 @@ const Contact = () => {
             {errors.content && <p>{errors.content.message}</p>}
           </div>
           <button type="submit">SEND</button>
+          <ToastContainer
+            position="top-center"
+            limit={1}
+            closeButton={false}
+            autoClose={2000}
+            hideProgressBar
+            className={styles.toast}
+          />
         </form>
       </div>
     </div>
