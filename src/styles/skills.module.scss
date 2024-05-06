@@ -17,8 +17,11 @@
     text-align: center;
     line-height: 70px;
     border-radius: 50%;
-    background-color: black;
-    color: white;
+    border: 1px solid #6f2bff;
+    background: linear-gradient(to right bottom, #d767ff, #6f2bff);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
     width: 300px;
     height: 70px;
   }

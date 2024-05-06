@@ -8,7 +8,7 @@
   width: 1200px;
   padding-bottom: 100px;
   margin-bottom: 100px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #a6a6a6;
 
   h2 {
     font-size: 30px;
@@ -16,7 +16,11 @@
     text-align: center;
     line-height: 70px;
     border-radius: 50%;
-    border: 2px solid black;
+    border: 1px solid #6f2bff;
+    background: linear-gradient(to right, #d767ff, #6f2bff);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
     width: 300px;
     height: 70px;
   }
@@ -45,7 +49,7 @@
   height: 250px;
   margin: 100px 0 50px 0;
   padding: 70px 0;
-  background-color: black;
+  background: linear-gradient(to right bottom, #d767ff, #6f2bff);
   color: white;
   border-radius: 10px;
 }
