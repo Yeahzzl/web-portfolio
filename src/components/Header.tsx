@@ -37,6 +37,14 @@ const Header = () => {
           >
             CONTACT
           </Link>
+          <Link
+            href="/comments"
+            className={
+              pathName === "/comments" ? styles.active : styles.menuItem
+            }
+          >
+            COMMENTS
+          </Link>
         </div>
       </div>
     </div>
