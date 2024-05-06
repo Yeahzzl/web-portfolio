@@ -2,110 +2,48 @@
 
 import Image from "next/image";
 import styles from "../styles/projects.module.scss";
-import pug from "../../public/img/pug.webp";
-import keyboduck from "../../public/img/keyboduck.webp";
-import travel from "../../public/img/travel.webp";
-import eat from "../../public/img/try.webp";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import { projectContext } from "@/app/context/projectContext";
 
 const Projects = () => {
+  const projects = useContext(projectContext);
+
   return (
     <div className={styles.section}>
       <div className={styles.container}>
         <h2>PROJECTS</h2>
         <div className={styles.imgGrid}>
-          <motion.div
-            className={styles.imgWrap}
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: false }}
-            transition={{
-              ease: "easeInOut",
-              duration: 0.5,
-            }}
-          >
-            <Link
-              className={styles.link}
-              target="_blank"
-              href="https://panoramic-reptile-f96.notion.site/Puppy-Ground-d7b0b5c1e23c4805b7f1b32063f8b951?pvs=4"
-            >
-              <Image src={pug} alt="pug" width={570} height={428} />
-              <div className={styles.overlay}>
-                <p>Puppy Ground</p>
-                <span>2024.01.04 ~ 02.08 (5주)</span>
-              </div>
-            </Link>
-          </motion.div>
-
-          <motion.div
-            className={styles.imgWrap}
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: false }}
-            transition={{
-              ease: "easeInOut",
-              duration: 0.5,
-            }}
-          >
-            <Link
-              className={styles.link}
-              target="_blank"
-              href="https://panoramic-reptile-f96.notion.site/Keyboduck1-c0010ad847374eda96927b958a6602cd?pvs=4"
-            >
-              <Image src={keyboduck} alt="keyboduck" width={570} height={428} />
-              <div className={styles.overlay}>
-                <p>Keyboduck</p>
-                <span>2023.12.26 ~ 01.02 (1주)</span>
-              </div>
-            </Link>
-          </motion.div>
-
-          <motion.div
-            className={styles.imgWrap}
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: false }}
-            transition={{
-              ease: "easeInOut",
-              duration: 0.5,
-            }}
-          >
-            <Link
-              className={styles.link}
-              target="_blank"
-              href="https://panoramic-reptile-f96.notion.site/Let-s-Travel-50bfa84dac07401480c03faa32b4d0ab?pvs=4"
-            >
-              <Image src={travel} alt="travel" width={570} height={428} />
-              <div className={styles.overlay}>
-                <p>Let&apos;s Travel</p>
-                <span>2023.12.05 ~ 12.10 (1주)</span>
-              </div>
-            </Link>
-          </motion.div>
-
-          <motion.div
-            className={styles.imgWrap}
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: false }}
-            transition={{
-              ease: "easeInOut",
-              duration: 0.5,
-            }}
-          >
-            <Link
-              className={styles.link}
-              target="_blank"
-              href="https://panoramic-reptile-f96.notion.site/Try-Eat-bf31e541f5524635b2739f5edb561649?pvs=4"
-            >
-              <Image src={eat} alt="eat" width={570} height={428} />
-              <div className={styles.overlay}>
-                <p>Try Eat</p>
-                <span>2023.11.21 ~ 11.26 (1주)</span>
-              </div>
-            </Link>
-          </motion.div>
+          {projects?.portfolio.map((item) => {
+            return (
+              <motion.div
+                key={item.id}
+                className={styles.imgWrap}
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: false }}
+                transition={{
+                  ease: "easeInOut",
+                  duration: 0.5,
+                }}
+              >
+                <Link className={styles.link} target="_blank" href={item.link}>
+                  <Image
+                    src={item.image}
+                    alt="pug"
+                    width={570}
+                    height={428}
+                    priority
+                  />
+                  <div className={styles.overlay}>
+                    <p>{item.title}</p>
+                    <span>{item.period}</span>
+                  </div>
+                </Link>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </div>

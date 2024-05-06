@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import type { Metadata } from "next";
+import Provider from "./provider";
 import localFont from "next/font/local";
 import "../styles/globals.css";
 import "../styles/reset.css";
@@ -48,7 +49,7 @@ export default function RootLayout({
     <html lang="ko" className={`${globalFont.variable} ${logoFont.variable}`}>
       <body>
         <Header />
-        {children}
+        <Provider>{children}</Provider>
         <Footer />
       </body>
     </html>
