@@ -78,7 +78,7 @@ const Projects = () => {
             >
               <Image src={travel} alt="travel" width={570} height={428} />
               <div className={styles.overlay}>
-                <p>Let's Travel</p>
+                <p>Let&apos;s Travel</p>
                 <span>2023.12.05 ~ 12.10 (1주)</span>
               </div>
             </Link>
