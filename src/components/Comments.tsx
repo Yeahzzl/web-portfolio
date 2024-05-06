@@ -13,7 +13,7 @@ const Comments = () => {
   const [nickname, setNickname] = useState<string>("");
   const [content, setContent] = useState<string>("");
 
-  const { comments, addCommentMutate } = useComments();
+  const { comments, addCommentMutate } = useComments(nickname, content);
 
   const nicknameChangeHandler = (
     event: React.ChangeEvent<HTMLInputElement>
@@ -32,7 +32,7 @@ const Comments = () => {
     }
 
     try {
-      await addCommentMutate.mutate();
+      // await addCommentMutate.mutate();
       toast.success("방명록이 등록되었습니다!");
       setNickname("");
       setContent("");
@@ -88,6 +88,13 @@ const Comments = () => {
           />
         </div>
         <div className={styles.commentContainer}>
+          {/* <div className={styles.commentWrap}>
+            <div className={styles.nameDate}>
+              <span>닉네임</span>
+              <p>2024년 05월 05일</p>
+            </div>
+            <p>방명록입니다</p>
+          </div> */}
           {comments?.data!.map((item) => {
             return (
               <div className={styles.commentWrap} key={item.id}>

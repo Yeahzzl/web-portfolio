@@ -4,3 +4,9 @@
 - 인원 : FE 1명
 - 목적 : 직관적이고 사용하기 쉬운 개인 포트폴리오 사이트 제작
 - 사용기술 : Next.js / Typescript
+
+## 주요기능
+
+- framer-motion을 활용한 모션구현
+- nodemailer를 활용한 이메일 전송기능
+- link 컴포넌트를 이용한 페이지 이동

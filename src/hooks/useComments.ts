@@ -1,11 +1,11 @@
-import { addComment, fetchCommentData } from "@/app/api/comments/route";
+import { addComment, fetchComment } from "@/app/api/comments";
 import { queryClient } from "@/app/provider";
 import { useMutation, useQuery } from "@tanstack/react-query";
 
-const useComments = () => {
+const useComments = (nickname: string, content: string) => {
   const { data: comments } = useQuery({
     queryKey: ["commentsList"],
-    queryFn: fetchCommentData,
+    queryFn: fetchComment,
   });
 
   const addCommentMutate = useMutation({
