@@ -14,6 +14,13 @@ export const fetchComment = async () => {
 };
 
 // 방명록 등록
-export const addComment = async (nickname: string, content: string) => {
-  await supabase.from("comments").insert({ nickname, content }).select();
+export const addComment = async (
+  userId: string,
+  nickname: string,
+  content: string
+) => {
+  await supabase
+    .from("comments")
+    .insert({ user_id: userId, nickname, content })
+    .select();
 };
