@@ -2,14 +2,14 @@
 
 import styles from "../styles/skills.module.scss";
 import Image from "next/image";
-import css from "../app/assets/img/CSS.svg";
-import html from "../app/assets/img/HTML.svg";
-import javascript from "../app/assets/img/JavaScript.svg";
-import next from "../app/assets/img/NextJS-Light.svg";
-import react from "../app/assets/img/React-Dark.svg";
-import sass from "../app/assets/img/Sass.svg";
-import styled from "../app/assets/img/StyledComponents.svg";
-import typescript from "../app/assets/img/TypeScript.svg";
+import css from "../../public/img/CSS.svg";
+import html from "../../public/img/HTML.svg";
+import javascript from "../../public/img/JavaScript.svg";
+import next from "../../public/img/NextJS-Light.svg";
+import react from "../../public/img/React-Dark.svg";
+import sass from "../../public/img/Sass.svg";
+import styled from "../../public/img/StyledComponents.svg";
+import typescript from "../../public/img/TypeScript.svg";
 import { motion } from "framer-motion";
 
 const Skills = () => {
