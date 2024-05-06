@@ -31,11 +31,10 @@ export const POST = async (request: NextRequest) => {
     const mailOptions = {
       from: username,
       to: authEmail,
-      subject: `[Portfolio] 문의사항`,
+      subject: `[Portfolio] ${title}`,
       html: `
       <p>이름/소속: ${name} </p>
       <p>이메일: ${email} </p>
-      <p>제목: ${title}</p>
       <p>문의 내용: ${content} </p>
       `,
     };

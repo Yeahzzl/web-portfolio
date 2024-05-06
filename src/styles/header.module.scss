@@ -16,9 +16,14 @@
 }
 
 .logoWrap {
-  font-family: var(--logo-font);
   font-size: 25px;
   cursor: pointer;
+
+  .link {
+    font-family: var(--logo-font);
+    text-decoration: none;
+    color: black;
+  }
 }
 
 .menuWrap {
@@ -44,16 +49,16 @@
   &:after {
     display: block;
     content: "";
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #6f2bff;
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
   }
 }
 
 .active {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #6f2bff;
   padding-bottom: 5px;
-  color: black;
+  color: #6f2bff;
   display: inline-block;
   text-decoration: none;
   font-size: 12px;

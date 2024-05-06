@@ -2,6 +2,7 @@
 import Link from "next/link";
 import styles from "../styles/contact.module.scss";
 import { useForm } from "react-hook-form";
+import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -17,6 +18,7 @@ const Contact = () => {
     register,
     handleSubmit,
     getValues,
+    reset,
     formState: { errors },
   } = useForm<Inputs>({ mode: "onChange" });
 
@@ -24,8 +26,11 @@ const Contact = () => {
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
   const onSubmitHandler = async () => {
-    const formData = getValues();
-    console.log("data", formData);
+    const formData = new FormData();
+    formData.append("name", getValues().name);
+    formData.append("email", getValues().email);
+    formData.append("title", getValues().title);
+    formData.append("content", getValues().content);
 
     try {
       const response = await fetch("/api/contact", {
@@ -33,13 +38,12 @@ const Contact = () => {
         body: formData,
       });
 
-      // if (!response.ok) {
-      //   console.log("falling over");
-      //   throw new Error(`response status: ${response.status}`);
-      // }
-
+      if (!response.ok) {
+        throw new Error(`response status: ${response.status}`);
+      }
       await response.json();
       toast.success("이메일이 성공적으로 전송되었습니다");
+      reset();
     } catch (error) {
       console.error(error);
       toast.error("이메일 전송에 실패하였습니다");
@@ -73,10 +77,20 @@ const Contact = () => {
           </Link>
         </div>
       </div>
-      <div className={styles.formSection}>
+      <motion.div
+        className={styles.formSection}
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: false }}
+        transition={{
+          ease: "easeInOut",
+          duration: 0.5,
+        }}
+      >
         <form
           className={styles.formContainer}
           onSubmit={handleSubmit(onSubmitHandler)}
+          method="post"
         >
           <span>궁금한 부분은 무엇이든 물어봐주세요!</span>
           <div className={styles.nameEmail}>
@@ -85,7 +99,7 @@ const Contact = () => {
               <input
                 type="text"
                 id="name"
-                placeholder="이름/소속을 입력해주세요"
+                placeholder="이름/소속"
                 {...register("name", {
                   required: "이름을 입력해주세요",
                   minLength: {
@@ -101,7 +115,7 @@ const Contact = () => {
               <input
                 type="email"
                 id="email"
-                placeholder="이메일을 입력해주세요"
+                placeholder="사용하는 이메일"
                 {...register("email", {
                   required: "이메일을 입력해주세요",
                   pattern: emailRegExp,
@@ -114,7 +128,7 @@ const Contact = () => {
             <label htmlFor="title">제목 *</label>
             <input
               className={styles.inputTitle}
-              placeholder="제목을 입력해주세요"
+              placeholder="메일 제목"
               id="title"
               {...register("title", {
                 required: "제목을 입력해주세요",
@@ -125,7 +139,7 @@ const Contact = () => {
           <div className={styles.inputWrap}>
             <label htmlFor="content">문의 내용 *</label>
             <textarea
-              placeholder="내용을 입력해주세요"
+              placeholder="내용"
               id="content"
               {...register("content", {
                 required: "내용을 입력해주세요",
@@ -143,7 +157,7 @@ const Contact = () => {
             className={styles.toast}
           />
         </form>
-      </div>
+      </motion.div>
     </div>
   );
 };

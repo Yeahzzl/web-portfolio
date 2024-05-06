@@ -30,7 +30,7 @@ const Projects = () => {
               target="_blank"
               href="https://panoramic-reptile-f96.notion.site/Puppy-Ground-d7b0b5c1e23c4805b7f1b32063f8b951?pvs=4"
             >
-              <Image src={pug} alt="pug" width={700} height={400} />
+              <Image src={pug} alt="pug" width={570} height={428} />
               <div className={styles.overlay}>
                 <p>Puppy Ground</p>
                 <span>2024.01.04 ~ 02.08 (5주)</span>
@@ -53,7 +53,7 @@ const Projects = () => {
               target="_blank"
               href="https://panoramic-reptile-f96.notion.site/Keyboduck1-c0010ad847374eda96927b958a6602cd?pvs=4"
             >
-              <Image src={keyboduck} alt="keyboduck" width={600} height={400} />
+              <Image src={keyboduck} alt="keyboduck" width={570} height={428} />
               <div className={styles.overlay}>
                 <p>Keyboduck</p>
                 <span>2023.12.26 ~ 01.02 (1주)</span>
@@ -76,7 +76,7 @@ const Projects = () => {
               target="_blank"
               href="https://panoramic-reptile-f96.notion.site/Let-s-Travel-50bfa84dac07401480c03faa32b4d0ab?pvs=4"
             >
-              <Image src={travel} alt="travel" width={800} height={400} />
+              <Image src={travel} alt="travel" width={570} height={428} />
               <div className={styles.overlay}>
                 <p>Let's Travel</p>
                 <span>2023.12.05 ~ 12.10 (1주)</span>
@@ -99,7 +99,7 @@ const Projects = () => {
               target="_blank"
               href="https://panoramic-reptile-f96.notion.site/Try-Eat-bf31e541f5524635b2739f5edb561649?pvs=4"
             >
-              <Image src={eat} alt="eat" width={600} height={400} />
+              <Image src={eat} alt="eat" width={570} height={428} />
               <div className={styles.overlay}>
                 <p>Try Eat</p>
                 <span>2023.11.21 ~ 11.26 (1주)</span>

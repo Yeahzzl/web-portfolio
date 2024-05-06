@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import styles from "../styles/header.module.scss";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -10,7 +9,11 @@ const Header = () => {
   return (
     <div className={styles.container}>
       <div className={styles.navBar}>
-        <div className={styles.logoWrap}>LEEYEJI</div>
+        <div className={styles.logoWrap}>
+          <Link href="/" className={styles.link}>
+            LEEYEJI
+          </Link>
+        </div>
         <div className={styles.menuWrap}>
           <Link
             href="/"
