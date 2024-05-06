@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import styles from "../styles/projects.module.scss";
-import pug from "../app/assets/img/퍼그.webp";
-import keyboduck from "../app/assets/img/키보덕.webp";
-import travel from "../app/assets/img/여행하자.webp";
-import eat from "../app/assets/img/트라이잇.webp";
+import pug from "../../public/img/pug.webp";
+import keyboduck from "../../public/img/keyboduck.webp";
+import travel from "../../public/img/travel.webp";
+import eat from "../../public/img/try.webp";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
