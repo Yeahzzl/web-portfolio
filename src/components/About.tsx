@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import styles from "../styles/about.module.scss";
 import { motion } from "framer-motion";
 
@@ -17,8 +18,18 @@ const About = () => {
             duration: 0.5,
           }}
         >
-          <p>안녕하세요</p>
-          <p>프론트엔드 개발자 이예지입니다!</p>
+          <p>
+            안녕하세요
+            <br />
+            프론트엔드 개발자 이예지입니다!
+          </p>
+          <Link
+            className={styles.resumeLink}
+            href="https://drive.google.com/file/d/1ZGXWxDUx16J44u9rOMros-lsg5BeKxtK/view?usp=sharing"
+            target="_blank"
+          >
+            <span>resume</span>
+          </Link>
         </motion.div>
       </div>
     </div>
