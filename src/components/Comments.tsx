@@ -8,13 +8,11 @@ import "react-toastify/dist/ReactToastify.css";
 import useComments from "@/hooks/useComments";
 import moment from "moment";
 import "moment/locale/ko";
-import { v4 as uuidv4 } from "uuid";
 
 const Comments = () => {
   const [nickname, setNickname] = useState<string>("");
   const [content, setContent] = useState<string>("");
-  const userId = uuidv4();
-  const { comments, addCommentMutate } = useComments(userId, nickname, content);
+  const { comments, addCommentMutate } = useComments(nickname, content);
 
   const nicknameChangeHandler = (
     event: React.ChangeEvent<HTMLInputElement>
@@ -26,10 +24,12 @@ const Comments = () => {
   const commentButtonHandler = async () => {
     if (!nickname) {
       toast.warning("닉네임을 입력해주세요");
+      return;
     }
 
     if (!content) {
       toast.warning("방명록을 입력해주세요");
+      return;
     }
 
     try {
@@ -67,6 +67,7 @@ const Comments = () => {
           <input
             type="text"
             placeholder="닉네임(최대10자)"
+            maxLength={10}
             value={nickname}
             onChange={nicknameChangeHandler}
             className={styles.nickname}
@@ -74,6 +75,7 @@ const Comments = () => {
           <input
             type="text"
             placeholder="방명록(최대50자)"
+            maxLength={50}
             value={content}
             onChange={contentChangeHandler}
             className={styles.content}
