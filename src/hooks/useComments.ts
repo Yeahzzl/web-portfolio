@@ -2,14 +2,14 @@ import { addComment, fetchComment } from "@/app/api/comments";
 import { queryClient } from "@/app/provider";
 import { useMutation, useQuery } from "@tanstack/react-query";
 
-const useComments = (userId: string, nickname: string, content: string) => {
+const useComments = (nickname: string, content: string) => {
   const { data: comments } = useQuery({
     queryKey: ["commentsList"],
     queryFn: fetchComment,
   });
 
   const addCommentMutate = useMutation({
-    mutationFn: async () => await addComment(userId, nickname, content),
+    mutationFn: async () => await addComment(nickname, content),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["commentsList"] });
     },
