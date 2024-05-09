@@ -31,38 +31,7 @@ export type Database = {
           nickname?: string;
           user_id?: string;
         };
-        Relationships: [
-          {
-            foreignKeyName: "comments_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referencedRelation: "profile";
-            referencedColumns: ["id"];
-          }
-        ];
-      };
-      profile: {
-        Row: {
-          id: string;
-          username: string;
-        };
-        Insert: {
-          id?: string;
-          username: string;
-        };
-        Update: {
-          id?: string;
-          username?: string;
-        };
-        Relationships: [
-          {
-            foreignKeyName: "profile_id_fkey";
-            columns: ["id"];
-            isOneToOne: true;
-            referencedRelation: "users";
-            referencedColumns: ["id"];
-          }
-        ];
+        Relationships: [];
       };
     };
     Views: {
