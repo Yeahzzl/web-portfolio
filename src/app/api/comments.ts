@@ -5,7 +5,7 @@ import { supabase } from "@/shared/supabase";
 export const fetchComment = async () => {
   const commentsQuery = await supabase
     .from("comments")
-    .select("*, profile(*)")
+    .select("*")
     .order("id", { ascending: false })
     .returns<Tables<"comments">[]>();
 
