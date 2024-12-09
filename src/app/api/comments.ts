@@ -10,10 +10,23 @@ export const fetchComment = async () => {
     .returns<Tables<"comments">[]>();
 
   const { data: commentsData, error } = commentsQuery;
+  if (error) {
+    throw new Error(error.message);
+  }
   return { data: commentsData, error };
 };
 
 // 방명록 등록
 export const addComment = async (nickname: string, content: string) => {
-  await supabase.from("comments").insert({ nickname, content }).select();
+  const { data, error } = await supabase
+    .from("comments")
+    .insert({ nickname, content })
+    .select();
+
+  if (error) {
+    console.error("Error adding comment:", error.message);
+    throw new Error(error.message); // 에러를 명확히 처리
+  }
+
+  return data;
 };

@@ -9,7 +9,13 @@ const useComments = (nickname: string, content: string) => {
   });
 
   const addCommentMutate = useMutation({
-    mutationFn: async () => await addComment(nickname, content),
+    mutationFn: async ({
+      nickname,
+      content,
+    }: {
+      nickname: string;
+      content: string;
+    }) => await addComment(nickname, content),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["commentsList"] });
     },

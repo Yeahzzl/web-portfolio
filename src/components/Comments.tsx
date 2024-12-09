@@ -33,7 +33,7 @@ const Comments = () => {
     }
 
     try {
-      await addCommentMutate.mutate();
+      await addCommentMutate.mutate({ nickname, content });
       toast.success("방명록이 등록되었습니다!");
       setNickname("");
       setContent("");
@@ -91,21 +91,27 @@ const Comments = () => {
           />
         </div>
         <div className={styles.commentContainer}>
-          {comments?.data!.map((item) => {
-            return (
-              <div className={styles.commentWrap} key={item.id}>
-                <div className={styles.nameDate}>
-                  <span>{item.nickname}</span>
-                  <p>
-                    {moment(item.created_at)
-                      .locale("ko")
-                      .format("yyyy년 MM월 DD일 A hh:mm")}
-                  </p>
+          {comments?.data ? (
+            comments.data.map((item) => {
+              return (
+                <div className={styles.commentWrap} key={item.id}>
+                  <div className={styles.nameDate}>
+                    <span>{item.nickname}</span>
+                    <p>
+                      {moment(item.created_at)
+                        .locale("ko")
+                        .format("yyyy년 MM월 DD일 A hh:mm")}
+                    </p>
+                  </div>
+                  <p>{item.content}</p>
                 </div>
-                <p>{item.content}</p>
-              </div>
-            );
-          })}
+              );
+            })
+          ) : (
+            <p style={{ textAlign: "center", margin: "100px" }}>
+              댓글을 불러올 수 없습니다
+            </p>
+          )}
         </div>
       </div>
     </div>
