@@ -1,23 +1,28 @@
 .section {
   max-width: 100vw;
-  display: flex;
-  justify-content: center;
-  background: linear-gradient(
-    to right,
-    rgba(215, 103, 255, 0.6),
-    rgba(111, 43, 255, 0.6)
-  );
+  // display: flex;
+  // justify-content: center;
+  // background: linear-gradient(
+  //   to right,
+  //   rgba(215, 103, 255, 0.6),
+  //   rgba(111, 43, 255, 0.6)
+  // );
 }
 
 .container {
   width: 1200px;
   margin: 150px auto;
 
-  h2 {
+  h3 {
     font-size: 30px;
     font-weight: 600;
+    height: 50px;
     text-align: left;
     color: white;
+    background: linear-gradient(to right, #d767ff, #6f2bff);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
   }
 }
 
@@ -34,6 +39,9 @@
 
   img {
     object-position: center;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
 
   .link {
@@ -44,6 +52,7 @@
 .imgWrap:hover .overlay {
   transition: all 0.3s ease-in-out;
   opacity: 1;
+  border-radius: 20px;
 }
 
 .overlay {
@@ -65,10 +74,13 @@
   p {
     font-weight: 600;
     font-size: 20px;
-    margin: 340px 0 15px 0;
+    margin: 300px 0 15px 0;
+    color: #272727;
   }
 
   span {
+    display: block;
+    margin-top: 10px;
     font-weight: 200;
     font-size: 15px;
   }

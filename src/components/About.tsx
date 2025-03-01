@@ -21,7 +21,7 @@ const About = () => {
           <p>
             안녕하세요
             <br />
-            프론트엔드 개발자 이예지입니다!
+            웹퍼블리셔 이예지입니다!
           </p>
           <Link
             className={styles.resumeLink}

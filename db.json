@@ -1,32 +1,72 @@
 {
-  "portfolio": [
+  "webPublishing": [
     {
       "id": 1,
-      "link": "https://panoramic-reptile-f96.notion.site/Puppy-Ground-d7b0b5c1e23c4805b7f1b32063f8b951?pvs=4",
-      "image": "/img/pug.webp",
-      "title": "Puppy Ground",
-      "period": "2024.01.04 ~ 02.08 (5주)"
+      "link": "https://frolicking-marshmallow-198f02.netlify.app/",
+      "image": "/img/coffee.webp",
+      "title": "Starbucks",
+      "period": "2025.01 (3일)",
+      "description": "스타벅스 클론코딩을 통한 swiper, gsap 라이브러리 사용",
+      "contribution": "100%"
     },
     {
       "id": 2,
       "link": "https://panoramic-reptile-f96.notion.site/Keyboduck1-c0010ad847374eda96927b958a6602cd?pvs=4",
-      "image": "/img/keyboduck.webp",
-      "title": "Keyboduck",
-      "period": "2023.12.26 ~ 01.02 (1주)"
+      "image": "/img/ipad.webp",
+      "title": "ipad",
+      "period": "2025.02(4일)",
+      "description": "아이패드 클론코딩을 통한 반응형 사이트 제작",
+      "contribution": "100%"
     },
     {
       "id": 3,
       "link": "https://panoramic-reptile-f96.notion.site/Let-s-Travel-50bfa84dac07401480c03faa32b4d0ab?pvs=4",
       "image": "/img/travel.webp",
       "title": "Let's Travel",
-      "period": "2023.12.05 ~ 12.10 (1주)"
+      "period": "2023.12.05 ~ 12.10 (1주)",
+      "contribution": "25%"
     },
     {
       "id": 4,
       "link": "https://panoramic-reptile-f96.notion.site/Try-Eat-bf31e541f5524635b2739f5edb561649?pvs=4",
       "image": "/img/try.webp",
       "title": "Try Eat",
-      "period": "2023.11.21 ~ 11.26 (1주)"
+      "period": "2023.11.21 ~ 11.26 (1주)",
+      "contribution": "25%"
+    }
+  ],
+  "frontend": [
+    {
+      "id": 1,
+      "link": "https://panoramic-reptile-f96.notion.site/Puppy-Ground-d7b0b5c1e23c4805b7f1b32063f8b951?pvs=4",
+      "image": "/img/puppy.webp",
+      "title": "Puppy Ground",
+      "period": "2024.01.04 ~ 02.08 (5주)",
+      "contribution": "25%"
+    },
+    {
+      "id": 2,
+      "link": "https://panoramic-reptile-f96.notion.site/Keyboduck1-c0010ad847374eda96927b958a6602cd?pvs=4",
+      "image": "/img/keyboard.webp",
+      "title": "Keyboduck",
+      "period": "2023.12.26 ~ 01.02 (1주)",
+      "contribution": "25%"
+    },
+    {
+      "id": 3,
+      "link": "https://panoramic-reptile-f96.notion.site/Let-s-Travel-50bfa84dac07401480c03faa32b4d0ab?pvs=4",
+      "image": "/img/traveler.webp",
+      "title": "Let's Travel",
+      "period": "2023.12.05 ~ 12.10 (1주)",
+      "contribution": "25%"
+    },
+    {
+      "id": 4,
+      "link": "https://panoramic-reptile-f96.notion.site/Try-Eat-bf31e541f5524635b2739f5edb561649?pvs=4",
+      "image": "/img/food.webp",
+      "title": "Try Eat",
+      "period": "2023.11.21 ~ 11.26 (1주)",
+      "contribution": "25%"
     }
   ]
 }

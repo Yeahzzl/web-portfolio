@@ -37,14 +37,14 @@ const Header = () => {
           >
             CONTACT
           </Link>
-          <Link
+          {/* <Link
             href="/comments"
             className={
               pathName === "/comments" ? styles.active : styles.menuItem
             }
           >
-            COMMENTS
-          </Link>
+            COMMENTS`
+          </Link> */}
         </div>
       </div>
     </div>
