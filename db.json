@@ -11,7 +11,7 @@
     },
     {
       "id": 2,
-      "link": "https://panoramic-reptile-f96.notion.site/Keyboduck1-c0010ad847374eda96927b958a6602cd?pvs=4",
+      "link": "https://ipad-pi-khaki.vercel.app/",
       "image": "/img/ipad.webp",
       "title": "ipad",
       "period": "2025.02(4일)",
@@ -42,6 +42,7 @@
       "image": "/img/puppy.webp",
       "title": "Puppy Ground",
       "period": "2024.01.04 ~ 02.08 (5주)",
+      "description": "반려견 중고 물품 거래 및 정보공유 사이트",
       "contribution": "25%"
     },
     {
@@ -50,6 +51,7 @@
       "image": "/img/keyboard.webp",
       "title": "Keyboduck",
       "period": "2023.12.26 ~ 01.02 (1주)",
+      "description": "다양한 브랜드의 키보드 정보, 리뷰, 평가, 등을 제공하는 사이트",
       "contribution": "25%"
     },
     {
@@ -58,6 +60,7 @@
       "image": "/img/traveler.webp",
       "title": "Let's Travel",
       "period": "2023.12.05 ~ 12.10 (1주)",
+      "description": "개인의 여행 스타일에 맞는 여행국가와 도시를 추천받는 사이트",
       "contribution": "25%"
     },
     {
@@ -66,6 +69,7 @@
       "image": "/img/food.webp",
       "title": "Try Eat",
       "period": "2023.11.21 ~ 11.26 (1주)",
+      "description": "나만의 맛집 정보공유 사이트",
       "contribution": "25%"
     }
   ]

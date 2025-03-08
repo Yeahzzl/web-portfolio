@@ -11,9 +11,10 @@ const Projects = () => {
   const projects = useContext(projectContext);
 
   return (
-    <div className={styles.section}>
+    <div className={styles.container}>
+      <p>*클릭 시 상세한 내용을 확인하실 수 있습니다</p>
       {/* WebPublishing */}
-      <div className={styles.container}>
+      <section className={styles.section}>
         <h3>Web-Publishing</h3>
         <div className={styles.imgGrid}>
           {projects?.webPublishing.map((item) => {
@@ -21,7 +22,7 @@ const Projects = () => {
               <motion.div
                 key={item.id}
                 className={styles.imgWrap}
-                initial={{ opacity: 0, scale: 0.5 }}
+                initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: false }}
                 transition={{
@@ -48,10 +49,10 @@ const Projects = () => {
             );
           })}
         </div>
-      </div>
+      </section>
 
       {/* TeamProject */}
-      <div className={styles.container}>
+      <section className={styles.section}>
         <h3>Frontend</h3>
         <div className={styles.imgGrid}>
           {projects?.frontend.map((item) => {
@@ -59,7 +60,7 @@ const Projects = () => {
               <motion.div
                 key={item.id}
                 className={styles.imgWrap}
-                initial={{ opacity: 0, scale: 0.5 }}
+                initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: false }}
                 transition={{
@@ -78,6 +79,7 @@ const Projects = () => {
                   <div className={styles.overlay}>
                     <p>{item.title}</p>
                     <span>{item.period}</span>
+                    <span>{item.description}</span>
                     <span>기여도 : {item.contribution}</span>
                   </div>
                 </Link>
@@ -85,7 +87,7 @@ const Projects = () => {
             );
           })}
         </div>
-      </div>
+      </section>
     </div>
   );
 };
