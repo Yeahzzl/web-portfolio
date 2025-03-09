@@ -1,29 +1,34 @@
-.section {
-  max-width: 100vw;
-  display: flex;
-  justify-content: center;
-  background: linear-gradient(
-    to right,
-    rgba(215, 103, 255, 0.6),
-    rgba(111, 43, 255, 0.6)
-  );
-}
-
 .container {
+  max-width: 100vw;
+}
+.container p {
+  font-size: 12px;
+  color: #a3a3a3;
   width: 1200px;
-  margin: 150px auto;
+  text-align: end;
+  margin: 150px auto 50px;
+}
+.section {
+  width: 1200px;
+  margin: 0 auto 150px;
 
-  h2 {
+  h3 {
     font-size: 30px;
     font-weight: 600;
+    height: 50px;
     text-align: left;
     color: white;
+    background: linear-gradient(to right, #d767ff, #6f2bff);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
   }
 }
 
 .imgGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
 }
 
 .imgWrap {
@@ -34,6 +39,9 @@
 
   img {
     object-position: center;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
 
   .link {
@@ -44,6 +52,7 @@
 .imgWrap:hover .overlay {
   transition: all 0.3s ease-in-out;
   opacity: 1;
+  border-radius: 20px;
 }
 
 .overlay {
@@ -51,24 +60,30 @@
   height: 428px;
   background-color: white;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
   left: 0;
-  right: 0;
-  padding-left: 50px;
   opacity: 0;
   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.4),
     rgba(255, 255, 255, 0.9)
   );
+  div {
+    padding-left: 30px;
+  }
+
   p {
+    width: 100%;
+    text-align: left;
     font-weight: 600;
     font-size: 20px;
-    margin: 340px 0 15px 0;
+    margin: 290px auto 20px;
+    color: #272727;
   }
 
   span {
+    display: block;
+    margin-top: 10px;
     font-weight: 200;
     font-size: 15px;
   }
