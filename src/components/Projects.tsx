@@ -39,10 +39,12 @@ const Projects = () => {
                     priority
                   />
                   <div className={styles.overlay}>
-                    <p>{item.title}</p>
-                    <span>{item.period}</span>
-                    <span>{item.description}</span>
-                    <span>기여도 : {item.contribution}</span>
+                    <div>
+                      <p>{item.title}</p>
+                      <span>{item.period}</span>
+                      <span>{item.description}</span>
+                      <span>기여도 : {item.contribution}</span>
+                    </div>
                   </div>
                 </Link>
               </motion.div>
@@ -77,10 +79,12 @@ const Projects = () => {
                     priority
                   />
                   <div className={styles.overlay}>
-                    <p>{item.title}</p>
-                    <span>{item.period}</span>
-                    <span>{item.description}</span>
-                    <span>기여도 : {item.contribution}</span>
+                    <div>
+                      <p>{item.title}</p>
+                      <span>{item.period}</span>
+                      <span>{item.description}</span>
+                      <span>기여도 : {item.contribution}</span>
+                    </div>
                   </div>
                 </Link>
               </motion.div>

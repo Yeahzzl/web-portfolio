@@ -60,21 +60,24 @@
   height: 428px;
   background-color: white;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
   left: 0;
-  right: 0;
-  padding-left: 30px;
   opacity: 0;
   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.4),
     rgba(255, 255, 255, 0.9)
   );
+  div {
+    padding-left: 30px;
+  }
+
   p {
+    width: 100%;
+    text-align: left;
     font-weight: 600;
     font-size: 20px;
-    margin-top: 280px;
+    margin: 290px auto 20px;
     color: #272727;
   }
 

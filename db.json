@@ -17,22 +17,6 @@
       "period": "2025.02(4일)",
       "description": "아이패드 클론코딩을 통한 반응형 사이트 제작",
       "contribution": "100%"
-    },
-    {
-      "id": 3,
-      "link": "https://panoramic-reptile-f96.notion.site/Let-s-Travel-50bfa84dac07401480c03faa32b4d0ab?pvs=4",
-      "image": "/img/travel.webp",
-      "title": "Let's Travel",
-      "period": "2023.12.05 ~ 12.10 (1주)",
-      "contribution": "25%"
-    },
-    {
-      "id": 4,
-      "link": "https://panoramic-reptile-f96.notion.site/Try-Eat-bf31e541f5524635b2739f5edb561649?pvs=4",
-      "image": "/img/try.webp",
-      "title": "Try Eat",
-      "period": "2023.11.21 ~ 11.26 (1주)",
-      "contribution": "25%"
     }
   ],
   "frontend": [
@@ -52,7 +36,7 @@
       "title": "Keyboduck",
       "period": "2023.12.26 ~ 01.02 (1주)",
       "description": "다양한 브랜드의 키보드 정보, 리뷰, 평가, 등을 제공하는 사이트",
-      "contribution": "25%"
+      "contribution": "30%"
     },
     {
       "id": 3,
@@ -61,7 +45,7 @@
       "title": "Let's Travel",
       "period": "2023.12.05 ~ 12.10 (1주)",
       "description": "개인의 여행 스타일에 맞는 여행국가와 도시를 추천받는 사이트",
-      "contribution": "25%"
+      "contribution": "30%"
     },
     {
       "id": 4,
