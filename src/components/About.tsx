@@ -25,7 +25,7 @@ const About = () => {
           </p>
           <Link
             className={styles.resumeLink}
-            href="https://drive.google.com/file/d/1ZGXWxDUx16J44u9rOMros-lsg5BeKxtK/view?usp=sharing"
+            href="https://drive.google.com/file/d/1C7Hvrh4V8LZdqo8LnlCHZYQtE9kOdkvy/view?usp=drive_link"
             target="_blank"
           >
             <span>resume</span>
