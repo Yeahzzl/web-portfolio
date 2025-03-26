@@ -1,23 +1,22 @@
 "use client";
 
-import Image from "next/image";
-import styles from "../styles/projects.module.scss";
-import Link from "next/link";
+import styles from "../styles/design.module.scss";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 import { useContext } from "react";
 import { projectContext } from "@/app/context/projectContext";
 
-const Projects = () => {
-  const projects = useContext(projectContext);
+const Design = () => {
+  const design = useContext(projectContext);
 
   return (
     <div className={styles.container}>
-      <p>*클릭 시 상세한 내용을 확인하실 수 있습니다</p>
-      {/* WebPublishing */}
+      {/* Edit */}
       <section className={styles.section}>
-        <h3>Web-Publishing</h3>
+        <h3>Poster</h3>
         <div className={styles.imgGrid}>
-          {projects?.webPublishing.map((item) => {
+          {design?.edit.map((item) => {
             return (
               <motion.div
                 key={item.id}
@@ -30,20 +29,18 @@ const Projects = () => {
                   duration: 0.5,
                 }}
               >
-                <Link className={styles.link} target="_blank" href={item.link}>
+                <Link target="_blank" href={item.link}>
                   <Image
                     src={item.image}
                     alt="project"
-                    width={570}
-                    height={428}
+                    width={380}
+                    height={380}
                     priority
                   />
                   <div className={styles.overlay}>
                     <div>
                       <p>{item.title}</p>
-                      <span>{item.period}</span>
                       <span>{item.description}</span>
-                      <span>기여도 : {item.contribution}</span>
                     </div>
                   </div>
                 </Link>
@@ -53,11 +50,11 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* TeamProject */}
+      {/* Web */}
       <section className={styles.section}>
-        <h3>Frontend</h3>
+        <h3>Web</h3>
         <div className={styles.imgGrid}>
-          {projects?.frontend.map((item) => {
+          {design?.web.map((item) => {
             return (
               <motion.div
                 key={item.id}
@@ -70,20 +67,56 @@ const Projects = () => {
                   duration: 0.5,
                 }}
               >
-                <Link className={styles.link} target="_blank" href={item.link}>
+                <Link target="_blank" href={item.link}>
                   <Image
                     src={item.image}
-                    alt="pug"
-                    width={570}
-                    height={428}
+                    alt="project"
+                    width={380}
+                    height={380}
                     priority
                   />
                   <div className={styles.overlay}>
                     <div>
                       <p>{item.title}</p>
-                      <span>{item.period}</span>
                       <span>{item.description}</span>
-                      <span>기여도 : {item.contribution}</span>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Package */}
+      <section className={styles.section}>
+        <h3>Package</h3>
+        <div className={styles.imgGrid}>
+          {design?.package.map((item) => {
+            return (
+              <motion.div
+                key={item.id}
+                className={styles.imgWrap}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: false }}
+                transition={{
+                  ease: "easeInOut",
+                  duration: 0.5,
+                }}
+              >
+                <Link target="_blank" href={item.link}>
+                  <Image
+                    src={item.image}
+                    alt="project"
+                    width={380}
+                    height={380}
+                    priority
+                  />
+                  <div className={styles.overlay}>
+                    <div>
+                      <p>{item.title}</p>
+                      <span>{item.description}</span>
                     </div>
                   </div>
                 </Link>
@@ -96,4 +129,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Design;

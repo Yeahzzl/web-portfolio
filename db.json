@@ -56,5 +56,95 @@
       "description": "나만의 맛집 정보공유 사이트",
       "contribution": "25%"
     }
+  ],
+  "edit": [
+    {
+      "id": 1,
+      "link": "https://blog.naver.com/dhorkfl1018/223059654076",
+      "image": "/img/edit1.webp",
+      "title": "지문적성검사연구소",
+      "description": "지문적성검사 전단지 작업"
+    },
+    {
+      "id": 2,
+      "link": "https://blog.naver.com/dhorkfl1018/223059655080",
+      "image": "/img/edit2.webp",
+      "title": "나무병원",
+      "description": "세이브트리 전단지 작업"
+    },
+    {
+      "id": 3,
+      "link": "https://blog.naver.com/dhorkfl1018/223059615108",
+      "image": "/img/edit3.webp",
+      "title": "블랙샤인머스켓",
+      "description": "블랙샤인머스켓 광고지 작업"
+    },
+    {
+      "id": 4,
+      "link": "https://blog.naver.com/dhorkfl1018/223059613970",
+      "image": "/img/edit4.webp",
+      "title": "J.PAPA",
+      "description": "화덕피자 전문점 포스터 작업"
+    },
+    {
+      "id": 5,
+      "link": "https://blog.naver.com/dhorkfl1018/223059615907",
+      "image": "/img/edit5.webp",
+      "title": "더 씨어터",
+      "description": "매직랜드 매직벌룬쇼 공연포스터 작업"
+    },
+    {
+      "id": 6,
+      "link": "https://blog.naver.com/dhorkfl1018/223059620367",
+      "image": "/img/edit6.webp",
+      "title": "소펙사코리아",
+      "description": "페이스트리랩 행사포스터 작업"
+    }
+  ],
+  "web": [
+    {
+      "id": 1,
+      "link": "https://blog.naver.com/dhorkfl1018/223059668173",
+      "image": "/img/web1.webp",
+      "title": "당진해나루",
+      "description": "황토참이삭 상세페이지 작업"
+    },
+    {
+      "id": 2,
+      "link": "https://blog.naver.com/dhorkfl1018/223059667892",
+      "image": "/img/web2.webp",
+      "title": "강화드림",
+      "description": "강화도쌀 상세페이지 작업"
+    },
+    {
+      "id": 3,
+      "link": "https://blog.naver.com/dhorkfl1018/223059609796",
+      "image": "/img/web3.webp",
+      "title": "오알엔",
+      "description": "디자인 지원사업 배너 작업"
+    }
+  ],
+  "package": [
+    {
+      "id": 1,
+      "link": "https://blog.naver.com/dhorkfl1018/223059670349",
+      "image": "/img/package1.webp",
+      "title": "오빠네쌀",
+      "description": "이천쌀 지대패키지 작업"
+    },
+    {
+      "id": 2,
+      "link": "https://blog.naver.com/dhorkfl1018/223059669821",
+      "image": "/img/package2.webp",
+      "title": "당진면천농협",
+      "description": "당진맛좋은쌀 지대패키지 작업"
+    },
+    {
+      "id": 3,
+      "link": "https://blog.naver.com/dhorkfl1018/223059675712",
+      "image": "/img/package3.webp",
+      "title": "교동 영농조합법인",
+      "description": "교동해풍섬쌀 지대패키지 작업"
+    }
   ]
 }

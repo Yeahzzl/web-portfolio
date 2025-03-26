@@ -27,7 +27,13 @@ const Header = () => {
               pathName === "/projects" ? styles.active : styles.menuItem
             }
           >
-            PROJECTS
+            PROJECT
+          </Link>
+          <Link
+            href="/design"
+            className={pathName === "/design" ? styles.active : styles.menuItem}
+          >
+            DESIGN
           </Link>
           <Link
             href="/contact"
