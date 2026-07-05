@@ -2,6 +2,24 @@
   "webPublishing": [
     {
       "id": 1,
+      "link": "https://www.econedu.go.kr/",
+      "image": "/img/econedu.png",
+      "title": "경제배움e+",
+      "period": "2026.04~ (진행중)",
+      "description": "경제배움e+ 외 2개 사이트 퍼블리싱 트러블슈팅 진행",
+      "contribution": "100%"
+    },
+    {
+      "id": 2,
+      "link": "https://artpass.kawf.kr:9443/common/main.do",
+      "image": "/img/artpass.png",
+      "title": "artpass",
+      "period": "2025.11 (3주)",
+      "description": "예술인패스 홈페이지 디자인개편 및 반응형 퍼블리싱 작업",
+      "contribution": "100%"
+    },
+    {
+      "id": 3,
       "link": "https://frolicking-marshmallow-198f02.netlify.app/",
       "image": "/img/coffee.webp",
       "title": "Starbucks",
@@ -10,11 +28,11 @@
       "contribution": "100%"
     },
     {
-      "id": 2,
+      "id": 4,
       "link": "https://ipad-pi-khaki.vercel.app/",
       "image": "/img/ipad.webp",
       "title": "ipad",
-      "period": "2025.02(4일)",
+      "period": "2025.02 (4일)",
       "description": "아이패드 클론코딩을 통한 반응형 사이트 제작",
       "contribution": "100%"
     }
@@ -55,6 +73,29 @@
       "period": "2023.11.21 ~ 11.26 (1주)",
       "description": "나만의 맛집 정보공유 사이트",
       "contribution": "25%"
+    }
+  ],
+  "uiux": [
+    {
+      "id": 1,
+      "link": "https://blog.naver.com/dhorkfl1018/223059654076",
+      "image": "/img/edit1.webp",
+      "title": "기획예산처_복권위원회",
+      "description": "홈페이지 개편 시안 제작"
+    },
+    {
+      "id": 2,
+      "link": "https://blog.naver.com/dhorkfl1018/223059654076",
+      "image": "/img/edit1.webp",
+      "title": "재졍경제부_경제배움e+",
+      "description": "경제교육종합포털 기능개선 용역사업 제안 시안"
+    },
+    {
+      "id": 3,
+      "link": "https://blog.naver.com/dhorkfl1018/223059654076",
+      "image": "/img/edit1.webp",
+      "title": "국가보훈부_국가보훈대상자 주택 우선공급",
+      "description": "국가보훈대상자 주택 우선공급 구축사업 제안 시안"
     }
   ],
   "edit": [

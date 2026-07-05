@@ -16,6 +16,35 @@
   }
 }
 
+//탭버튼 추가
+.tabMenu {
+  width: 1200px;
+  margin: 100px auto 25px;
+  display: flex;
+  gap: 12px;
+}
+
+.tabBtn {
+  padding: 8px 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  color: #999;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+
+  &.active {
+    color: #000;
+    border-bottom: 2px solid #000;
+    font-weight: 600;
+  }
+
+  &:hover {
+    color: #333;
+  }
+}
+
 .imgGrid {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -58,8 +87,14 @@
     rgba(0, 0, 0, 0.2),
     rgba(0, 0, 0, 0.7)
   );
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border-box;
+  padding: 0 30px 30px;
+
   div {
-    padding-left: 30px;
+    width: 100%;
+    padding-left: 0;
   }
 
   p {
@@ -67,8 +102,10 @@
     text-align: left;
     font-weight: 600;
     font-size: 20px;
-    margin: 290px auto 20px;
+    margin: 0 0 8px;
     color: #ffffff;
+    word-break: keep-all;
+    line-height: 1.4;
   }
 
   span {
@@ -76,6 +113,8 @@
     margin-top: 10px;
     font-weight: 200;
     font-size: 15px;
+    line-height: 1.2;
     color: #ffffff;
+    word-break: keep-all;
   }
 }
