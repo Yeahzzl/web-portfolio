@@ -15,7 +15,7 @@
       "image": "/img/artpass.png",
       "title": "artpass",
       "period": "2025.11 (3주)",
-      "description": "예술인패스 홈페이지 디자인개편 및 반응형 퍼블리싱 작업",
+      "description": "예술인패스 홈페이지 디자인개편 퍼블리싱 및 반응형 작업",
       "contribution": "100%"
     },
     {
@@ -78,24 +78,47 @@
   "uiux": [
     {
       "id": 1,
-      "link": "https://blog.naver.com/dhorkfl1018/223059654076",
-      "image": "/img/edit1.webp",
+      "images": [
+        "/img/uiux/bokgwon-1.webp",
+        "/img/uiux/bokgwon-2.webp",
+        "/img/uiux/bokgwon-3.webp"
+      ],
       "title": "기획예산처_복권위원회",
-      "description": "홈페이지 개편 시안 제작"
+      "description": "복권위원회 홈페이지 개편 시안 제작",
+      "status": "수행"
     },
     {
       "id": 2,
-      "link": "https://blog.naver.com/dhorkfl1018/223059654076",
-      "image": "/img/edit1.webp",
+      "images": [
+        "/img/uiux/econedu-1.webp",
+        "/img/uiux/econedu-2.webp",
+        "/img/uiux/econedu-3.webp"
+      ],
       "title": "재졍경제부_경제배움e+",
-      "description": "경제교육종합포털 기능개선 용역사업 제안 시안"
+      "description": "경제교육종합포털 기능개선 용역사업 제안 시안",
+      "status": "수주"
     },
     {
       "id": 3,
-      "link": "https://blog.naver.com/dhorkfl1018/223059654076",
-      "image": "/img/edit1.webp",
+      "images": [
+        "/img/uiux/bohunbu-1.webp",
+        "/img/uiux/bohunbu-2.webp",
+        "/img/uiux/bohunbu-3.webp"
+      ],
       "title": "국가보훈부_국가보훈대상자 주택 우선공급",
-      "description": "국가보훈대상자 주택 우선공급 구축사업 제안 시안"
+      "description": "국가보훈대상자 주택 우선공급 구축사업 제안 시안",
+      "status": "수주"
+    },
+    {
+      "id": 4,
+      "images": [
+        "/img/uiux/innovative-1.webp",
+        "/img/uiux/innovative-2.webp",
+        "/img/uiux/innovative-3.webp"
+      ],
+      "title": "식품의약품안전처_혁신제품 사전상담 통합 홈페이지",
+      "description": "혁신제품 사전상담 통합홈페이지 구축 제안 시안",
+      "status": "미수주"
     }
   ],
   "edit": [

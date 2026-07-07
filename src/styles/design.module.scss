@@ -118,3 +118,151 @@
     word-break: keep-all;
   }
 }
+
+//uiux 그리드 카드
+.uiuxGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.uiuxCard {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.thumbWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.slideTrack {
+  display: flex;
+  height: 100%;
+  transition: transform 0.25s ease;
+}
+
+.slideItem {
+  flex-shrink: 0;
+  position: relative;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.navPrev {
+  left: 6px;
+}
+
+.navNext {
+  right: 6px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.5;
+  cursor: pointer;
+
+  &.dotActive {
+    opacity: 1;
+  }
+}
+
+.uiuxBody {
+  display: block;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.uiuxTitle {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 4px 0 4px;
+  color: #111;
+}
+
+.uiuxDesc {
+  display: block;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 15px;
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+
+.badgeSuccess {
+  background: #e3f6ec;
+  color: #1a8f5a;
+}
+
+.badgeWarning {
+  background: #fdf1e0;
+  color: #b8770c;
+}
+
+.badgeNeutral {
+  background: #e9f0ff;
+  color: #1f53cc;
+}

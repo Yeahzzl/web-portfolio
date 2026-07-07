@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useContext, useState } from "react";
 import { projectContext } from "@/app/context/projectContext";
+import UiuxGrid from "./UiuxGrid";
+import { UiuxItem } from "./UiuxCard";
 
 type TabKey = "uiux" | "edit" | "web" | "package";
 
@@ -49,37 +51,43 @@ const Design = () => {
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
-          <div className={styles.imgGrid}>
-            {activeItems.map((item) => (
-              <motion.div
-                key={item.id}
-                className={styles.imgWrap}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: false }}
-                transition={{
-                  ease: "easeInOut",
-                  duration: 0.5,
-                }}
-              >
-                <Link target="_blank" href={item.link}>
-                  <Image
-                    src={item.image}
-                    alt="project"
-                    width={380}
-                    height={380}
-                    priority
-                  />
-                  <div className={styles.overlay}>
-                    <div>
-                      <p>{item.title}</p>
-                      <span>{item.description}</span>
+          {activeTab === "uiux" ? (
+            // UI/UX만 2x2 카드형 + 슬라이드 썸네일 구조
+            <UiuxGrid items={activeItems as UiuxItem[]} />
+          ) : (
+            // 기존 Poster / Web / Package는 오버레이 그리드 그대로 유지
+            <div className={styles.imgGrid}>
+              {activeItems.map((item: any) => (
+                <motion.div
+                  key={item.id}
+                  className={styles.imgWrap}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: false }}
+                  transition={{
+                    ease: "easeInOut",
+                    duration: 0.5,
+                  }}
+                >
+                  <Link target="_blank" href={item.link}>
+                    <Image
+                      src={item.image}
+                      alt="project"
+                      width={380}
+                      height={380}
+                      priority
+                    />
+                    <div className={styles.overlay}>
+                      <div>
+                        <p>{item.title}</p>
+                        <span>{item.description}</span>
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          )}
         </motion.section>
       </AnimatePresence>
     </div>
