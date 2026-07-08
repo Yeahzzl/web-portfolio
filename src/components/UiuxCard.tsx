@@ -37,21 +37,20 @@ const UiuxCard = ({ item }: { item: UiuxItem }) => {
         <div
           className={styles.slideTrack}
           style={{
-            width: `${total * 100}%`,
-            transform: `translateX(-${idx * (100 / total)}%)`,
+            // width: `${total * 100}%`,
+            transform: `translateX(-${idx * 100}%)`,
           }}
         >
           {item.images.map((src, i) => (
             <div
               key={i}
               className={styles.slideItem}
-              style={{ width: `${100 / total}%` }}
+              // style={{ width: `${100 / total}%` }}
             >
               <Image
                 src={src}
                 alt={`${item.title} 화면 ${i + 1}`}
-                width={1140}
-                height={100}
+                fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 style={{ objectFit: "cover" }}
               />
