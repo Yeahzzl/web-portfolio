@@ -9,7 +9,9 @@ export const queryClient = new QueryClient();
 const provider = ({ children }: { children: React.ReactNode }) => {
   return (
     <QueryClientProvider client={queryClient}>
-      <projectContext.Provider value={data}>{children}</projectContext.Provider>
+      <projectContext.Provider value={data as any}>
+        {children}
+      </projectContext.Provider>
     </QueryClientProvider>
   );
 };
