@@ -11,4 +11,4 @@ type ProjectData = {
   package: any[];
 };
 
-export const projectContext = createContext<ProjectData | undefined>(undefined);
+export const projectContext = createContext<ProjectData>(data as ProjectData);
