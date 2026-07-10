@@ -7,12 +7,11 @@ import { useState } from "react";
 export type UiuxStatus = "수주" | "미수주" | "수행";
 
 export type UiuxItem = {
-  id: string;
+  id: number;
   images: string[];
   title: string;
   description: string;
   status?: UiuxStatus;
-  link: string;
 };
 
 const STATUS_STYLE: Record<UiuxStatus, string> = {

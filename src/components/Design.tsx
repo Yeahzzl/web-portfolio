@@ -7,7 +7,6 @@ import Link from "next/link";
 import { useContext, useState } from "react";
 import { projectContext } from "@/app/context/projectContext";
 import UiuxGrid from "./UiuxGrid";
-import { UiuxItem } from "./UiuxCard";
 
 type TabKey = "uiux" | "edit" | "web" | "package";
 
@@ -53,7 +52,7 @@ const Design = () => {
         >
           {activeTab === "uiux" ? (
             // UI/UX만 2x2 카드형 + 슬라이드 썸네일 구조
-            <UiuxGrid items={activeItems as UiuxItem[]} />
+            <UiuxGrid items={design?.uiux ?? []} />
           ) : (
             // 기존 Poster / Web / Package는 오버레이 그리드 그대로 유지
             <div className={styles.imgGrid}>
